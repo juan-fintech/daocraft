@@ -476,6 +476,7 @@ li {
   top: 1100px;
   right: auto;
   bottom: 0%;
+  display: none;
   width: 300px;
 }
 
@@ -527,6 +528,22 @@ li {
 .illo-1-mobile {
   display: none;
   width: 500px;
+}
+
+.button {
+  margin-top: 10px;
+  background-color: rgba(221, 220, 199, 0.15);
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
+  font-family: Montserrat, sans-serif;
+  color: rgba(221, 220, 199, 0.75);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.button:hover {
+  background-color: rgba(221, 220, 199, 0.25);
+  color: #dddcc7;
 }
 
 @media screen and (max-width: 991px) {
@@ -735,6 +752,10 @@ li {
   h2 {
     font-size: 25px;
     line-height: 30px;
+  }
+
+  .body {
+    overflow: scroll;
   }
 
   .nav-center {
