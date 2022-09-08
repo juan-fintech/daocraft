@@ -354,8 +354,9 @@ li {
 }
 
 .client-cards {
-  width: 300px;
+  width: 100%;
   height: 100%;
+  min-height: 300px;
   padding: 40px;
   border-radius: 40px;
   background-color: #000;
@@ -422,57 +423,6 @@ li {
 
 .section-header {
   text-align: left;
-}
-
-.client-columns {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 70vw;
-  max-width: 1220px;
-  margin-top: 40px;
-}
-
-.column-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: start;
-  -webkit-align-items: flex-start;
-  -ms-flex-align: start;
-  align-items: flex-start;
-}
-
-.column-3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: stretch;
-  -webkit-align-items: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-}
-
-.column-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .email {
@@ -546,23 +496,6 @@ li {
   width: 500px;
 }
 
-.button {
-  display: block;
-  margin-top: 10px;
-  background-color: rgba(221, 220, 199, 0.15);
-  -webkit-transition: all 200ms ease;
-  transition: all 200ms ease;
-  font-family: Montserrat, sans-serif;
-  color: rgba(221, 220, 199, 0.75);
-  font-size: 14px;
-  font-weight: 600;
-}
-
-.button:hover {
-  background-color: rgba(221, 220, 199, 0.25);
-  color: #dddcc7;
-}
-
 .grid {
   display: none;
   margin-top: 25px;
@@ -616,6 +549,17 @@ li {
   display: none;
 }
 
+.community-grid {
+  width: 100%;
+  margin-top: 30px;
+  grid-column-gap: 50px;
+  grid-row-gap: 50px;
+  -ms-grid-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: auto;
+  grid-template-rows: auto;
+}
+
 @media screen and (max-width: 991px) {
   .nav-bar {
     -webkit-box-pack: end;
@@ -659,13 +603,8 @@ li {
   }
 
   .client-cards {
-    height: 325px;
     padding: 15px;
     border-radius: 20px;
-  }
-
-  .client-columns {
-    width: 80vw;
   }
 
   .illo-1 {
@@ -709,6 +648,11 @@ li {
 
   .list.refine {
     display: none;
+  }
+
+  .community-grid {
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
   }
 }
 
@@ -756,9 +700,7 @@ li {
 
   .client-cards {
     width: 100%;
-    height: auto;
-    min-height: 200px;
-    margin-bottom: 30px;
+    min-height: 285px;
   }
 
   .logo-link {
@@ -770,24 +712,6 @@ li {
     width: auto;
     font-size: 45px;
     line-height: 55px;
-  }
-
-  .client-columns {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
-
-  .column-2 {
-    padding-right: 0px;
-    padding-left: 0px;
-  }
-
-  .column-3 {
-    padding-right: 0px;
-    padding-left: 0px;
   }
 
   .illo-1 {
@@ -828,6 +752,11 @@ li {
     overflow: hidden;
     width: 300px;
   }
+
+  .community-grid {
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media screen and (max-width: 479px) {
@@ -852,6 +781,10 @@ li {
 
   .inset-section {
     padding: 25px;
+  }
+
+  .client-cards {
+    min-height: 250px;
   }
 
   .hero-header {
@@ -885,6 +818,11 @@ li {
     display: block;
     width: 200px;
     opacity: 1;
+  }
+
+  .community-grid {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
   }
 }
 
